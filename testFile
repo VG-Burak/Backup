@@ -1,0 +1,24 @@
+import tkinter
+import customtkinter
+from tkinter import filedialog
+import functions
+import DeviceUrlList
+from tkinter import ttk
+
+customtkinter.set_appearance_mode("dark")  # Modes: system (default), light, dark
+customtkinter.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
+
+app = customtkinter.CTk()  # create CTk window like you do with the Tk window
+app.geometry("600x400")
+
+#Creating Tabs
+tabControl = customtkinter.CTkTabview(app, width=app.winfo_screenwidth(), height=app.winfo_screenheight())
+tab1 = customtkinter.CTkFrame(tabControl)
+tab2 = customtkinter.CTkFrame(tabControl)
+
+tabControl.add("Tab 1")
+tabControl.add("Tab 2")
+
+tabControl.grid()
+
+app.mainloop()
